@@ -1,0 +1,95 @@
+body {
+    margin: 0;
+}
+
+header {
+    background: linear-gradient(45deg, #FF0000, #FA00FF, #0400D2, #00B2FF, #00FF57, #DBF72C, #FF8A00, #FF0000);
+    width: 99%;
+    height: 60px;
+    border-radius: 5px;
+    margin: auto;
+}
+
+header nav {
+    width: 100%;
+    height: 95%;
+    margin: auto;
+}
+
+header .menuList {
+    display: flex;
+    background-color: #F4F4F4;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+
+header .menuList .menuItem {
+    margin: 0 30px;
+    display: flex;
+    text-transform: lowercase;
+}
+
+header .menuList .menuItem:last-of-type {
+    position: absolute;
+    right: 0;
+}
+
+header li a {
+    color: #333333;
+    text-decoration: none;
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+}
+
+header .promocje {
+    background-color: #FF4242;
+    text-transform: uppercase;
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: #FFFFFF;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+header .dropdown {
+    display: none;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    position: absolute;
+    left: 10px;
+    top: 65px;
+    padding: 20px 30px;
+    background-color: #F4F4F4;
+    width: 95%;
+    font-family: "Inter", sans-serif;
+    border-radius: 5px;
+}
+
+.menuItem:hover .dropdown {
+    display: grid;
+}
+
+header .dropdown li {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+
+header .dropdown li a {
+    font-size: 15;
+    font-weight: 500;
+}
+
+header .dropdown .categoryList {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0;
+}
+
+header .dropdown .categoryList a {
+    font-size: 13px;
+    font-weight: 400;
+}
