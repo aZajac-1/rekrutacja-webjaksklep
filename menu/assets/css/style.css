@@ -3,16 +3,14 @@ body {
 }
 
 header {
-    background: linear-gradient(45deg, #FF0000, #FA00FF, #0400D2, #00B2FF, #00FF57, #DBF72C, #FF8A00, #FF0000);
-    width: 99%;
+    width: 100%;
     height: 60px;
-    border-radius: 5px;
     margin: auto;
 }
 
 header nav {
-    width: 100%;
-    height: 95%;
+    width: 99%;
+    height: 100%;
     margin: auto;
 }
 
@@ -20,16 +18,24 @@ header .menuList {
     display: flex;
     background-color: #F4F4F4;
     width: 100%;
-    height: 100%;
+    height: 95%;
     margin: 0;
     padding: 0;
     align-items: center;
+    border-width: 0 0 4px 0;
+    border-style: solid;
+    border-radius: 5px;
+    border-image: linear-gradient(to right, #FF0000, #FA00FF, #0400D2, #00B2FF, #00FF57, #DBF72C, #FF8A00, #FF0000) 1;
+    background-origin: border-box;
+    background-clip: content-box, border-box;
 }
 
 header .menuList .menuItem {
-    margin: 0 30px;
+    padding: 0 30px;
+    height: 100%;
     display: flex;
     text-transform: lowercase;
+    align-items: center;
 }
 
 header .menuList .menuItem:last-of-type {
@@ -37,11 +43,23 @@ header .menuList .menuItem:last-of-type {
     right: 0;
 }
 
+.menu::after {
+    content: '';
+    border: solid black;
+    border-width: 0 1px 1px 0;
+    display: inline-block;
+    padding: 3px;
+    margin: 0 0px 4px 10px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
+
 header li a {
     color: #333333;
     text-decoration: none;
     font-family: "Poppins", sans-serif;
     font-size: 16px;
+    z-index: 10;
 }
 
 header .promocje {
@@ -58,17 +76,43 @@ header .dropdown {
     display: none;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     position: absolute;
-    left: 10px;
-    top: 65px;
+    left: 0px;
+    top: 61px;
     padding: 20px 30px;
     background-color: #F4F4F4;
     width: 95%;
     font-family: "Inter", sans-serif;
-    border-radius: 5px;
+    border-radius: 20px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: #FFFFFF;
+}
+
+header .dropdown::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 147px;
+    width: 0;
+    background-color: #F4F4F4;
+    width: 40px;
+    height: 40px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
 }
 
 .menuItem:hover .dropdown {
     display: grid;
+}
+
+.dropdown:hover {
+    display: grid;
+}
+
+.menuItem:hover .menu::after {
+    margin: 0 0px 0px 10px;
+    transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
 }
 
 header .dropdown li {
