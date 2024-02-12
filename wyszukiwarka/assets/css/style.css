@@ -1,0 +1,50 @@
+body {
+    font-family: 'Inter', sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-wrapper {
+    width: 100%;
+    max-width: 400px;
+}
+
+.search-box {
+    background: #FFFFFF;
+    border: 1px solid #D1D1D1;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    padding: 8px 12px;
+}
+
+.search-input {
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    padding: 8px;
+    color: #111827;
+}
+
+.search-icon {
+    margin-left: auto;
+    cursor: pointer;
+}
+
+.products {
+    display: none;
+    background: white;
+    border-radius: 8px;
+    margin-top: 5px;
+}
+
+.search-item {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 12px;
+    background-color: #F4F4F4;
+}
