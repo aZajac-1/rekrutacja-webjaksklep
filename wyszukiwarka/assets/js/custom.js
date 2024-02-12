@@ -12,9 +12,7 @@
                 productsPanel.style.display = 'block';
                 var url = urlBase + input;
 
-                var products = getApi(url);
-                console.log(products);
-
+                getApi(url);
 
             } else {
                 productsPanel.style.display = 'none';
@@ -23,10 +21,7 @@
 
         async function getApi(url) {
 
-            // Storing response
             const response = await fetch(url);
-
-            // Storing data in form of JSON
             var data = await response.json();
             console.log(data);
             if (response) {
@@ -40,7 +35,7 @@
             var products_data = data.products;
             products_data.forEach(function(product) {
                 const div = document.createElement('div');
-                div.innerHTML = '<p>' + product.title + '</p>' + '<p>' + product.price + '</p>';
+                div.innerHTML = '<p>' + product.title + '</p>' + '<p> $' + product.price + '</p>';
                 div.className = 'search-item';
                 div.onclick = function() {
                     searchInput.value = product + 'cena';

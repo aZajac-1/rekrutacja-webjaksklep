@@ -1,0 +1,52 @@
+body {
+    font-family: 'Source Code Pro', monospace;
+    background-color: #1e1e1e;
+    color: #ffffff;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.terminal {
+    width: 80%;
+    max-width: 600px;
+    background-color: #2d2d2d;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.terminal-header {
+    color: #bbbbbb;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #3f3f3f;
+    margin-bottom: 20px;
+}
+
+.terminal-body {
+    white-space: pre-wrap;
+    overflow-y: auto;
+    max-height: 300px;
+}
+
+.input-area {
+    display: flex;
+    margin-top: 20px;
+}
+
+.prompt {
+    margin-right: 10px;
+    color: #00ff00;
+}
+
+input[type="text"] {
+    width: 100%;
+    background: transparent;
+    border: none;
+    color: #00ff00;
+    font-family: inherit;
+    font-size: inherit;
+    outline: none;
+}
