@@ -2,8 +2,6 @@
         const productsPanel = document.getElementById('products');
         const searchIcon = document.getElementById('search-icon');
         const urlBase = 'https://dummyjson.com/products/search?q=';
-        //const myObj = JSON.parse(myJSON);
-        //let productTitle = myObj.title;
         searchIcon.addEventListener("click", function() {
 
             const input = searchInput.value;
@@ -23,15 +21,10 @@
 
             const response = await fetch(url);
             var data = await response.json();
-            console.log(data);
-            if (response) {
-                //hideloader();
-            }
             show(data);
         }
 
         function show(data) {
-            console.log(data.products);
             var products_data = data.products;
             products_data.forEach(function(product) {
                 const div = document.createElement('div');

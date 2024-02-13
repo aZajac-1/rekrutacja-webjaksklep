@@ -30,7 +30,6 @@ function processCommand(command) {
             break;
         case 'quote':
             getQuote();
-
             break;
         case 'double':
             if (args[1] && !isNaN(parseFloat(args[1]))) {
@@ -53,11 +52,8 @@ async function getQuote() {
     console.log(data.quote);
     if (response) {
         var randomQuote = data.quote;
-        terminalBody.innerHTML += '<div>terminal: "' + randomQuote + ' "</div>';
+        terminalBody.innerHTML += `<div>terminal: ${ randomQuote }</div>`;
     }
-
-
-
 
 }
 
